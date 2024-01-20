@@ -1,0 +1,7 @@
+/node_modules
+/target
+
+# playground generated files
+a.out.js
+a.out.wasm
+tree-sitter-semver.wasm

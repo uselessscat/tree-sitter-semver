@@ -1,0 +1,43 @@
+{
+  "name": "tree-sitter-semver",
+  "version": "0.0.1",
+  "description": "SemVer grammar for the tree-sitter parsing library",
+  "main": "bindings/node",
+  "keywords": [
+    "parser",
+    "lexer",
+    "semver"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uselessscat/tree-sitter-semver"
+  },
+  "scripts": {
+    "build": "tree-sitter generate",
+    "build-wasm": "tree-sitter build-wasm",
+    "lint": "eslint grammar.js",
+    "parse": "tree-sitter parse",
+    "playground": "tree-sitter playground"
+  },
+  "author": "Ariel Carvajal <arie.cbpro@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-google": "^0.14.0",
+    "tree-sitter-cli": "^0.20.8"
+  },
+  "tree-sitter": [
+    {
+      "scope": "semver",
+      "file-types": [
+        "semver"
+      ],
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    }
+  ]
+}

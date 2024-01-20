@@ -1,0 +1,167 @@
+{
+  "name": "semver",
+  "rules": {
+    "semver": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "core"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "-"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "pre_release"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "+"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "build"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "core": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "major"
+        },
+        {
+          "type": "STRING",
+          "value": "."
+        },
+        {
+          "type": "SYMBOL",
+          "name": "minor"
+        },
+        {
+          "type": "STRING",
+          "value": "."
+        },
+        {
+          "type": "SYMBOL",
+          "name": "patch"
+        }
+      ]
+    },
+    "major": {
+      "type": "SYMBOL",
+      "name": "_numeric_identifier"
+    },
+    "minor": {
+      "type": "SYMBOL",
+      "name": "_numeric_identifier"
+    },
+    "patch": {
+      "type": "SYMBOL",
+      "name": "_numeric_identifier"
+    },
+    "pre_release": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_pre_release_identifier"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "."
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_pre_release_identifier"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "build": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_alphanumeric_identifier"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "."
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_alphanumeric_identifier"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "_pre_release_identifier": {
+      "type": "PATTERN",
+      "value": "0|[1-9]\\d*|\\d*[a-zA-Z\\-][\\da-zA-Z\\-]*"
+    },
+    "_alphanumeric_identifier": {
+      "type": "PATTERN",
+      "value": "[\\da-zA-Z\\-]+"
+    },
+    "_numeric_identifier": {
+      "type": "PATTERN",
+      "value": "(0|[1-9]\\d*)"
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": []
+}
+

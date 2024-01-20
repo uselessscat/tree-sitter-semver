@@ -1,0 +1,402 @@
+==============================
+Test 1
+==============================
+0.0.4
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch)))
+
+==============================
+Test 2
+==============================
+1.2.3
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch)))
+
+==============================
+Test 3
+==============================
+10.20.30
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch)))
+
+==============================
+Test 4
+==============================
+1.1.2-prerelease+meta
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release)
+  (build))
+
+==============================
+Test 5
+==============================
+1.1.2+meta
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (build))
+
+==============================
+Test 6
+==============================
+1.1.2+meta-valid
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (build))
+
+==============================
+Test 7
+==============================
+1.0.0-alpha
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release))
+
+==============================
+Test 8
+==============================
+1.0.0-beta
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release))
+
+==============================
+Test 9
+==============================
+1.0.0-alpha.beta
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release))
+
+==============================
+Test 10
+==============================
+1.0.0-alpha.beta.1
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release))
+
+==============================
+Test 11
+==============================
+1.0.0-alpha.1
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release))
+
+==============================
+Test 12
+==============================
+1.0.0-alpha0.valid
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release))
+
+==============================
+Test 13
+==============================
+1.0.0-alpha.0valid
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release))
+
+==============================
+Test 14
+==============================
+1.0.0-alpha-a.b-c-somethinglong+build.1-aef.1-its-okay
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release)
+  (build))
+
+==============================
+Test 15
+==============================
+1.0.0-rc.1+build.1
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release)
+  (build))
+
+==============================
+Test 16
+==============================
+2.0.0-rc.1+build.123
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release)
+  (build))
+
+==============================
+Test 17
+==============================
+1.2.3-beta
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release))
+
+==============================
+Test 18
+==============================
+10.2.3-DEV-SNAPSHOT
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release))
+
+==============================
+Test 19
+==============================
+1.2.3-SNAPSHOT-123
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release))
+
+==============================
+Test 20
+==============================
+1.0.0
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch)))
+
+==============================
+Test 21
+==============================
+2.0.0
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch)))
+
+==============================
+Test 22
+==============================
+1.1.7
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch)))
+
+==============================
+Test 23
+==============================
+2.0.0+build.1848
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (build))
+
+==============================
+Test 24
+==============================
+2.0.1-alpha.1227
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release))
+
+==============================
+Test 25
+==============================
+1.0.0-alpha+beta
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release)
+  (build))
+
+==============================
+Test 26
+==============================
+1.2.3----RC-SNAPSHOT.12.9.1--.12+788
+---(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release)
+  (build))
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release)
+  (build))
+
+==============================
+Test 27
+==============================
+1.2.3----R-S.12.9.1--.12+meta
+---(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release)
+  (build))
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release)
+  (build))
+
+==============================
+Test 28
+==============================
+1.2.3----RC-SNAPSHOT.12.9.1--.12
+---(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release)
+  (build))
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release)
+  (build))
+
+==============================
+Test 29
+==============================
+1.0.0+0.build.1-rc.10000aaa-kk-0.1
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (build))
+
+==============================
+Test 30
+==============================
+99999999999999999999999.999999999999999999.99999999999999999
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch)))
+
+==============================
+Test 31
+==============================
+1.0.0-0A.is.legal
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (pre_release))
+
+==============================
+Test 32
+==============================
+0.0.0+-qasd.asd
+---
+(semver
+  (core
+    (major)
+    (minor)
+    (patch))
+  (build))

@@ -1,0 +1,85 @@
+[
+  {
+    "type": "build",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "core",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "major",
+          "named": true
+        },
+        {
+          "type": "minor",
+          "named": true
+        },
+        {
+          "type": "patch",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "major",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "minor",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "patch",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "pre_release",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "semver",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "build",
+          "named": true
+        },
+        {
+          "type": "core",
+          "named": true
+        },
+        {
+          "type": "pre_release",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  }
+]
